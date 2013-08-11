@@ -1,0 +1,12 @@
+diff -up mate-file-manager-1.5.2/libcaja-private/caja-file.c.symlink mate-file-manager-1.5.2/libcaja-private/caja-file.c
+--- mate-file-manager-1.5.2/libcaja-private/caja-file.c.symlink	2013-01-19 03:31:26.757286409 +0100
++++ mate-file-manager-1.5.2/libcaja-private/caja-file.c	2013-01-19 03:32:44.377447263 +0100
+@@ -2171,7 +2171,7 @@ update_info_internal (CajaFile *file,
+ 		}
+ 	}
+ 
+-	is_symlink = g_file_info_get_is_symlink (info);
++	is_symlink = g_file_info_get_is_symlink (info) || (g_file_info_get_file_type (info) == G_FILE_TYPE_SYMBOLIC_LINK);
+ 	if (file->details->is_symlink != is_symlink) {
+ 		changed = TRUE;
+ 	}
