@@ -1,6 +1,5 @@
 %define url_ver     %(echo %{version}|cut -d. -f1,2)
 %define realname    mate-file-manager
-%define name        caja
 %define major       1
 %define libname     %mklibname %{name}-extension %{major}
 %define develname   %mklibname -d %{name}-extension
@@ -10,7 +9,7 @@
 
 Name:               caja
 Version:            1.6.2
-Release:            1
+Release:            2
 Summary:            File manager for the MATE desktop environment
 Group:              File tools
 License:            GPLv2+ and LGPLv2+
@@ -67,8 +66,8 @@ Requires:           gvfs
 Suggests:           glib-networking
 Suggests:           davfs2 
 Suggests:           ffmpegthumbnailer
-Provides:           %{realname} = %{version}-%{release}
 
+%rename %{realname}
 
 %description
 Caja is a file manager for the MATE desktop environment.
