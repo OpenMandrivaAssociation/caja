@@ -1,5 +1,5 @@
-%define url_ver     %(echo %{version}|cut -d. -f1,2)
-%define realname    mate-file-manager
+%define url_ver	%(echo %{version}|cut -d. -f1,2)
+%define oname    mate-file-manager
 
 %define api 2.0
 %define major 1
@@ -35,7 +35,6 @@ Patch6:             nautilus-2.25.91-umountfstab.patch
 #Patch36:            nautilus-bnc363122-lockdown-context-menus.diff
 # (fc) add a search .desktop file (GNOME bug #350950) (SUSE)
 Patch7:             nautilus-bgo350950-search-desktop.diff
-
 BuildRequires:      gtk-doc
 BuildRequires:      intltool
 BuildRequires:      mate-common
@@ -54,14 +53,12 @@ BuildRequires:      pkgconfig(mate-desktop-2.0)
 BuildRequires:      pkgconfig(pangox)
 BuildRequires:      pkgconfig(sm)
 BuildRequires:      pkgconfig(unique-1.0)
-
 Requires:           gvfs
 # Whitout these, caja can not connect to a secure network or WebDav
 Suggests:           glib-networking
 Suggests:           davfs2 
 Suggests:           ffmpegthumbnailer
-
-%rename %{realname}
+%rename %{oname}
 
 %description
 Caja is a file manager for the MATE desktop environment.
@@ -87,7 +84,7 @@ Group:          Development/C
 Requires:       %{libname} = %{version}-%{release}
 Requires:       %{girname} = %{version}-%{release}
 Provides:       %{name}-devel = %{version}-%{release}
-%rename %{_lib}%{realname}-devel
+%rename %{_lib}%{oname}-devel
 
 %description -n %{devname}
 This package provides the necessary development libraries and include 
@@ -101,8 +98,7 @@ NOCONFIGURE=1 ./autogen.sh
 %build
 %configure2_5x \
         --disable-static \
-        --disable-update-mimedb \
-        --disable-schemas-compile
+        --disable-update-mimedb
 
 %make
 
