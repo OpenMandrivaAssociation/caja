@@ -9,7 +9,7 @@
 
 Summary:            File manager for the MATE desktop environment
 Name:               caja
-Version:            1.8.0
+Version:            1.8.2
 Release:            1
 Group:              File tools
 License:            GPLv2+ and LGPLv2+
@@ -93,11 +93,9 @@ files to allow you to develop caja components.
 %prep
 %setup -q
 %apply_patches
-NOCONFIGURE=1 ./autogen.sh
 
 %build
-%configure2_5x \
-        --disable-static \
+%configure \
         --disable-update-mimedb
 
 %make
