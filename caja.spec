@@ -41,7 +41,7 @@ BuildRequires:      mate-common
 BuildRequires:      pkgconfig(cairo-gobject)
 BuildRequires:      pkgconfig(dbus-glib-1)
 BuildRequires:      pkgconfig(exempi-2.0)
-BuildRequires:      pkgconfig(gail)
+BuildRequires:      pkgconfig(gail-3.0)
 BuildRequires:      pkgconfig(glib-2.0)
 BuildRequires:      pkgconfig(gobject-introspection-1.0)
 BuildRequires:      pkgconfig(gsettings-desktop-schemas)
