@@ -52,7 +52,7 @@ BuildRequires:      pkgconfig(libxml-2.0)
 BuildRequires:      pkgconfig(mate-desktop-2.0)
 BuildRequires:      pkgconfig(pangox)
 BuildRequires:      pkgconfig(sm)
-BuildRequires:      pkgconfig(unique-1.0)
+BuildRequires:      pkgconfig(unique-3.0)
 Requires:           gvfs
 # Whitout these, caja can not connect to a secure network or WebDav
 Suggests:           glib-networking
