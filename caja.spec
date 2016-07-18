@@ -9,8 +9,8 @@
 
 Summary:            File manager for the MATE desktop environment
 Name:               caja
-Version:            1.8.2
-Release:            2
+Version:            1.14.1
+Release:            1
 Group:              File tools
 License:            GPLv2+ and LGPLv2+
 Url:                http://www.mate-desktop.org/
@@ -45,7 +45,7 @@ BuildRequires:      pkgconfig(gail)
 BuildRequires:      pkgconfig(glib-2.0)
 BuildRequires:      pkgconfig(gobject-introspection-1.0)
 BuildRequires:      pkgconfig(gsettings-desktop-schemas)
-BuildRequires:      pkgconfig(gtk+-2.0)
+BuildRequires:      pkgconfig(gtk+-3.0)
 BuildRequires:      pkgconfig(libexif)
 BuildRequires:      pkgconfig(librsvg-2.0)
 BuildRequires:      pkgconfig(libxml-2.0)
@@ -96,7 +96,8 @@ files to allow you to develop caja components.
 
 %build
 %configure \
-        --disable-update-mimedb
+        --disable-update-mimedb \
+	--with-gtk=3.0
 
 %make
 
@@ -133,6 +134,7 @@ mkdir -p %{buildroot}%{_localstatedir}/lib/mate/desktop \
 %{_iconsdir}/hicolor/*/emblems/emblem-note.png
 %dir %{_libdir}/caja
 %dir %{_libdir}/caja/extensions-2.0
+%{_datadir}/appdata/caja.appdata.xml
 
 %files -n %{libname}
 %{_libdir}/libcaja-extension.so.%{major}*
