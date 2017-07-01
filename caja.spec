@@ -17,9 +17,9 @@ Url:		http://www.mate-desktop.org/
 Source0:	http://pub.mate-desktop.org/releases/%{url_ver}/%{name}-%{version}.tar.xz
 Source4:	caja-ffmpegthumbnailer.thumbnailer
 # (fc) put default launchers on desktop according to product.id (Mageia/Mandriva specific)
-Patch0:	nautilus-defaultdesktop.patch
+#Patch0:	nautilus-defaultdesktop.patch
 # (fc) merge desktop with system launcher (used for dynamic, Mageia/Mandriva specific)
-Patch1:	nautilus-dynamic.patch
+#Patch1:	nautilus-dynamic.patch
 # gw from Fedora, fix crash on weird file infos
 # http://bugzilla.mate.org/show_bug.cgi?id=519743
 Patch2:	nautilus-filetype-symlink-fix.patch
