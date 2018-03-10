@@ -1,2 +1,5 @@
-sources:
+removed_sources:
   caja-1.14.1.tar.xz: db84d1876031974e33db12eb0bea187639a11cc7
+  caja-1.18.3.tar.xz: 9b591659df514712dadb1be5eab15f106b9ea75d
+sources:
+  caja-1.18.5.tar.xz: cc745666bea0bf1f2de2e215d0b17ec432b7c339

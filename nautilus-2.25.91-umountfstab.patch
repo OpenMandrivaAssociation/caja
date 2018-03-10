@@ -9,7 +9,7 @@ diff -up mate-file-manager-1.5.2/libcaja-private/caja-desktop-link-monitor.c.umo
  
      GList *mount_links;
  };
-@@ -274,6 +275,44 @@ mount_added_callback (GVolumeMonitor *vo
+@@ -210,6 +211,44 @@ mount_added_callback (GVolumeMonitor *vo
  }
  
  
@@ -54,7 +54,7 @@ diff -up mate-file-manager-1.5.2/libcaja-private/caja-desktop-link-monitor.c.umo
  static void
  mount_removed_callback (GVolumeMonitor *volume_monitor,
                          GMount *mount,
-@@ -490,6 +529,9 @@ caja_desktop_link_monitor_init (gpointer
+@@ -426,6 +465,9 @@ caja_desktop_link_monitor_init (gpointer
          g_signal_connect_object (monitor->details->volume_monitor, "mount_changed",
                                   G_CALLBACK (mount_changed_callback), monitor, 0);
  
@@ -64,14 +64,3 @@ diff -up mate-file-manager-1.5.2/libcaja-private/caja-desktop-link-monitor.c.umo
  }
  
  static void
-@@ -564,6 +606,10 @@ desktop_link_monitor_finalize (GObject *
-     {
-         g_source_remove (monitor->details->changed_id);
-     }
-+    if (monitor->details->volume_removed_id != 0)
-+    {
-+        g_source_remove (monitor->details->volume_removed_id);
-+    }
- 
-     g_free (monitor->details);
- 

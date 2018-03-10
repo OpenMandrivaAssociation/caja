@@ -1,7 +1,7 @@
 diff -up mate-file-manager-1.5.2/libcaja-private/caja-file.c.symlink mate-file-manager-1.5.2/libcaja-private/caja-file.c
 --- mate-file-manager-1.5.2/libcaja-private/caja-file.c.symlink	2013-01-19 03:31:26.757286409 +0100
 +++ mate-file-manager-1.5.2/libcaja-private/caja-file.c	2013-01-19 03:32:44.377447263 +0100
-@@ -2171,7 +2171,7 @@ update_info_internal (CajaFile *file,
+@@ -2169,7 +2169,7 @@ update_info_internal (CajaFile *file,
  		}
  	}
  

@@ -1,7 +1,7 @@
 diff -up mate-file-manager-1.5.2/libcaja-private/caja-directory-async.c.kdedesktop mate-file-manager-1.5.2/libcaja-private/caja-directory-async.c
 --- mate-file-manager-1.5.2/libcaja-private/caja-directory-async.c.kdedesktop	2013-01-19 03:35:55.853364076 +0100
 +++ mate-file-manager-1.5.2/libcaja-private/caja-directory-async.c	2013-01-19 03:39:56.634740679 +0100
-@@ -2441,8 +2441,23 @@ start_monitoring_file_list (CajaDirector
+@@ -2434,8 +2434,23 @@ start_monitoring_file_list (CajaDirector
              directory->details->hidden_file_hash =
                  g_hash_table_new_full (g_str_hash, g_str_equal, g_free, NULL);
          }
@@ -30,12 +30,12 @@ diff -up mate-file-manager-1.5.2/libcaja-private/caja-directory-async.c.kdedeskt
 diff -up mate-file-manager-1.5.2/src/caja-application.c.kdedesktop mate-file-manager-1.5.2/src/caja-application.c
 --- mate-file-manager-1.5.2/src/caja-application.c.kdedesktop	2013-01-19 03:35:55.857364036 +0100
 +++ mate-file-manager-1.5.2/src/caja-application.c	2013-01-19 03:40:39.171277571 +0100
-@@ -956,6 +956,8 @@ caja_application_startup (CajaApplicatio
-         return;
+@@ -2114,6 +2114,8 @@ caja_application_startup (CajaApplicatio
+         goto out;
      }
  
 +    caja_set_kde_trash_name ("trash.desktop");
 +
-     if (kill_shell)
-     {
-         if (unique_app_is_running (application->unique_app))
+     if (kill_shell) {
+         g_debug ("Killing application, as requested");
+         g_action_group_activate_action (G_ACTION_GROUP (application),
