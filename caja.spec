@@ -9,7 +9,7 @@
 
 Summary:	File manager for the MATE desktop environment
 Name:		caja
-Version:	1.20.0
+Version:	1.20.3
 Release:	1
 Group:		File tools
 License:	GPLv2+ and LGPLv2+
@@ -70,7 +70,7 @@ Requires:       %{name}-schemas = %{version}-%{release}
 
 # Whitout these, caja can not connect to a secure network or WebDav
 Suggests:	glib-networking
-Suggests:	davfs2 
+Suggests:	davfs2
 
 # Without this caja could not show thumbnails for video files
 Suggests:	ffmpegthumbnailer
@@ -200,4 +200,3 @@ install -dm 0755 %{buildroot}%{_libdir}/%{name}/extensions-2.0
 
 %check
 desktop-file-validate %{buildroot}%{_datadir}/applications/%{name}*.desktop
-
