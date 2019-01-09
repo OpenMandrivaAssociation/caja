@@ -160,7 +160,7 @@ License:	LGPLv2+
 Group:		File tools
 BuildArch:	noarch
 
-%rename		%{oname}-schemas = %{version}-%{release}
+%rename		%{oname}-schemas
 
 %description schemas
 This package provides the gsettings schemas for %{name}.
