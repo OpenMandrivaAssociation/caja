@@ -172,7 +172,7 @@ This package provides the gsettings schemas for %{name}.
 
 %prep
 %setup -q
-%apply_patches
+%autopatch -p1
 
 %build
 #NOCONFIGURE=1 ./autogen.sh
@@ -182,10 +182,10 @@ This package provides the gsettings schemas for %{name}.
 	--disable-icon-update \
 	--enable-introspection \
 	%{nil}
-%make
+%make_build
 
 %install
-%makeinstall_std
+%make_install
 
 # thumbnailer
 install -dm 0755 %{buildroot}%{_datadir}/thumbnailers
