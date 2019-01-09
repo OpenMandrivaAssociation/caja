@@ -24,7 +24,7 @@ Source4:	caja-ffmpegthumbnailer.thumbnailer
 # http://bugzilla.mate.org/show_bug.cgi?id=519743
 Patch2:	nautilus-filetype-symlink-fix.patch
 # (fc) don't show KDE specific links (CVS + me) (Mdv bug #4844)
-Patch3:	nautilus-kdedesktop.patch
+#Patch3:	nautilus-kdedesktop.patch
 # (fc) don't colourise selected icon
 #Patch4:	nautilus-2.29.92-colour.patch
 # (fc) fix RTL build when disabling self-check (Fedora)
