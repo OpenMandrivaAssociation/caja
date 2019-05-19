@@ -66,7 +66,7 @@ Requires:	filesystem
 Requires:	gamin
 Requires:	gvfs
 # needed for using caja out of MATE environment
-Requires:       %{name}-schemas = %{version}-%{release}
+Requires:	%{name}-schemas = %{version}-%{release}
 
 Suggests:	%{name}-extensions = %{version}-%{release}
 # Whitout these, caja can not connect to a secure network or WebDav
@@ -94,14 +94,13 @@ This package provides Caja, a file manager for the MATE desktop environment.
 %dir %{_localstatedir}/lib/mate/
 %{_bindir}/*
 %{_datadir}/applications/*
-%{_datadir}/appdata/caja.appdata.xml
+%{_datadir}/metainfo/caja.appdata.xml
 %dir %{_datadir}/caja/
 %{_datadir}/caja/*
 %{_datadir}/dbus-1/services/org.mate.freedesktop.FileManager1.service
 %{_datadir}/mime/packages/caja.xml
 %{_datadir}/thumbnailers/caja-ffmpegthumbnailer.thumbnailer
 %{_datadir}/pixmaps/%{name}/*
-%{_iconsdir}/hicolor/*/apps/caja.*
 %{_iconsdir}/hicolor/*/emblems/emblem-note.png
 %{_mandir}/man1/*
 %dir %{_libdir}/caja
