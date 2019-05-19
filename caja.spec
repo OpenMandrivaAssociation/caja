@@ -9,7 +9,7 @@
 
 Summary:	File manager for the MATE desktop environment
 Name:		caja
-Version:	1.20.3
+Version:	1.22.1
 Release:	1
 Group:		File tools
 License:	GPLv2+ and LGPLv2+
@@ -68,6 +68,7 @@ Requires:	gvfs
 # needed for using caja out of MATE environment
 Requires:       %{name}-schemas = %{version}-%{release}
 
+Suggests:	%{name}-extensions = %{version}-%{release}
 # Whitout these, caja can not connect to a secure network or WebDav
 Suggests:	glib-networking
 Suggests:	davfs2
