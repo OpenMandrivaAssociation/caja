@@ -64,7 +64,9 @@ BuildRequires:	pkgconfig(x11)
 
 Requires:	filesystem
 Requires:	gamin
+%ifnarch %{ix86} %{armx}
 Requires:	gvfs
+%endif
 # needed for using caja out of MATE environment
 Requires:	%{name}-schemas = %{version}-%{release}
 
