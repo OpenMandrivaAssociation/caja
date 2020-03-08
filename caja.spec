@@ -9,7 +9,7 @@
 
 Summary:	File manager for the MATE desktop environment
 Name:		caja
-Version:	1.22.3
+Version:	1.24.0
 Release:	1
 Group:		File tools
 License:	GPLv2+ and LGPLv2+
@@ -36,6 +36,7 @@ Patch6:	nautilus-2.25.91-umountfstab.patch
 # (fc) add a search .desktop file (GNOME bug #350950) (SUSE)
 #Patch7:	nautilus-bgo350950-search-desktop.diff
 
+BuildRequires:	autoconf-archive
 BuildRequires:	desktop-file-utils
 BuildRequires:	intltool
 BuildRequires:	mate-common
