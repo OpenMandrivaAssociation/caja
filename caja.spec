@@ -10,36 +10,25 @@
 Summary:	File manager for the MATE desktop environment
 Name:		caja
 Version:	1.26.0
-Release:	1
+Release:	2
 Group:		File tools
 License:	GPLv2+ and LGPLv2+
 Url:		https://www.mate-desktop.org/
 Source0:	https://pub.mate-desktop.org/releases/%{url_ver}/%{name}-%{version}.tar.xz
 Source4:	caja-ffmpegthumbnailer.thumbnailer
-# (fc) put default launchers on desktop according to product.id (Mageia/Mandriva specific)
-#Patch0:	nautilus-defaultdesktop.patch
-# (fc) merge desktop with system launcher (used for dynamic, Mageia/Mandriva specific)
-#Patch1:	nautilus-dynamic.patch
+
 # gw from Fedora, fix crash on weird file infos
 # http://bugzilla.mate.org/show_bug.cgi?id=519743
 Patch2:	nautilus-filetype-symlink-fix.patch
-# (fc) don't show KDE specific links (CVS + me) (Mdv bug #4844)
-#Patch3:	nautilus-kdedesktop.patch
-# (fc) don't colourise selected icon
-#Patch4:	nautilus-2.29.92-colour.patch
-# (fc) fix RTL build when disabling self-check (Fedora)
-#Patch5:	nautilus-2.26.0-rtlfix.patch
 # (fc) auto-unmount ejected medias when mount points are in fstab (Mdv bug #39540)
 Patch6:	nautilus-2.25.91-umountfstab.patch
 # (fc) allow to lockdown context menu (Novell bug #363122) (SUSE)
-#Patch36:	nautilus-bnc363122-lockdown-context-menus.diff
-# (fc) add a search .desktop file (GNOME bug #350950) (SUSE)
-#Patch7:	nautilus-bgo350950-search-desktop.diff
 
 BuildRequires:	autoconf-archive
 BuildRequires:	desktop-file-utils
 BuildRequires:	intltool
 BuildRequires:	mate-common
+BuildRequires:	mate-desktop-schemas
 BuildRequires:	pkgconfig(cairo-gobject)
 BuildRequires:	pkgconfig(dbus-glib-1)
 BuildRequires:	pkgconfig(exempi-2.0)
