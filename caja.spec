@@ -10,7 +10,7 @@
 Summary:	File manager for the MATE desktop environment
 Name:		caja
 Version:	1.26.0
-Release:	2
+Release:	3
 Group:		File tools
 License:	GPLv2+ and LGPLv2+
 Url:		https://www.mate-desktop.org/
@@ -28,7 +28,6 @@ BuildRequires:	autoconf-archive
 BuildRequires:	desktop-file-utils
 BuildRequires:	intltool
 BuildRequires:	mate-common
-BuildRequires:	mate-desktop-schemas
 BuildRequires:	pkgconfig(cairo-gobject)
 BuildRequires:	pkgconfig(dbus-glib-1)
 BuildRequires:	pkgconfig(exempi-2.0)
@@ -52,6 +51,7 @@ BuildRequires:	pkgconfig(sm)
 BuildRequires:	pkgconfig(unique-3.0)
 BuildRequires:	pkgconfig(x11)
 
+Requires:	mate-desktop-schemas
 Requires:	filesystem
 Requires:	gamin
 %ifnarch %{ix86} %{armx}
