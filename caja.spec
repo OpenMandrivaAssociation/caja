@@ -9,8 +9,8 @@
 
 Summary:	File manager for the MATE desktop environment
 Name:		caja
-Version:	1.26.0
-Release:	3
+Version:	1.26.1
+Release:	1
 Group:		File tools
 License:	GPLv2+ and LGPLv2+
 Url:		https://www.mate-desktop.org/
