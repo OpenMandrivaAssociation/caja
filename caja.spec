@@ -22,7 +22,7 @@ Source4:	caja-ffmpegthumbnailer.thumbnailer
 # http://bugzilla.mate.org/show_bug.cgi?id=519743
 Patch2:	nautilus-filetype-symlink-fix.patch
 # (fc) auto-unmount ejected medias when mount points are in fstab (Mdv bug #39540)
-Patch6:	nautilus-2.25.91-umountfstab.patch
+#Patch6:	nautilus-2.25.91-umountfstab.patch
 # (fc) allow to lockdown context menu (Novell bug #363122) (SUSE)
 
 BuildRequires:	autoconf-archive
@@ -167,8 +167,7 @@ This package provides the gsettings schemas for %{name}.
 #---------------------------------------------------------------------------
 
 %prep
-%setup -q
-%autopatch -p1
+%autosetup -p1
 
 %build
 #NOCONFIGURE=1 ./autogen.sh
