@@ -1,21 +1,21 @@
-%define url_ver	%(echo %{version}|cut -d. -f1,2)
+%define mate_ver	%(echo %{version}|cut -d. -f1,2)
 %define oname	mate-file-manager
 
 %define api 2.0
 %define major 1
 %define libname %mklibname %{name}-extension
 %define girname %mklibname %{name}-gir %{api}
-%define devname %mklibname -d %{name}-extension
+%define devname %mklibname %{name}-extension -d
 %define oldlibname %mklibname %{name}-extension 1
 
 Summary:	File manager for the MATE desktop environment
 Name:		caja
-Version:	1.26.3
+Version:	1.28.0
 Release:	1
 Group:		File tools
 License:	GPLv2+ and LGPLv2+
 Url:		https://www.mate-desktop.org/
-Source0:	https://pub.mate-desktop.org/releases/1.26/%{name}-%{version}.tar.xz
+Source0:	https://pub.mate-desktop.org/releases/%{mate_ver}/%{name}-%{version}.tar.xz
 Source4:	caja-ffmpegthumbnailer.thumbnailer
 
 # gw from Fedora, fix crash on weird file infos
@@ -62,7 +62,7 @@ Requires:	gvfs
 Requires:	%{name}-schemas = %{version}-%{release}
 
 Suggests:	%{name}-extensions = %{version}-%{release}
-Suggests:	%{name}-actions >= %{url_ver}
+Suggests:	%{name}-actions >= %{mate_ver}
 # Whitout these, caja can not connect to a secure network or WebDav
 Suggests:	glib-networking
 Suggests:	davfs2
@@ -106,7 +106,7 @@ This package provides Caja, a file manager for the MATE desktop environment.
 Summary:	Libraries for Mate file manager
 Group:		System/Libraries
 # Intentionally unversioned, because libname should not contain version number
-Obsoletes:	%{oldlibname}
+Obsoletes:	%{oldlibname} < %{EVRD}
 
 %description -n %{libname}
 This package contains the shared libraries used by %{name}.
