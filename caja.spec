@@ -25,6 +25,10 @@ Patch2:	nautilus-filetype-symlink-fix.patch
 #Patch6:	nautilus-2.25.91-umountfstab.patch
 # (fc) allow to lockdown context menu (Novell bug #363122) (SUSE)
 
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:	autoconf-archive
 BuildRequires:	desktop-file-utils
 BuildRequires:	intltool
